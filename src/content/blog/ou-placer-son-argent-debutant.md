@@ -2,7 +2,6 @@
 title: "Où placer son argent quand on débute ? Le guide complet 2026"
 description: "Vous ne savez pas où placer votre argent ? Ce guide complet explique simplement les meilleurs placements pour débutants en France en 2026 : Livret A, PEA, assurance vie, ETF et plus encore."
 pubDate: 2026-04-20
-heroImage: "../../assets/blog-placeholder-1.jpg"
 ---
 
 Vous avez quelques centaines — ou quelques milliers — d'euros qui dorment sur votre compte courant. Vous savez qu'il faudrait les faire travailler, mais dès que vous commencez à chercher, vous tombez sur des termes incompréhensibles : PEA, ETF, assurance vie en unités de compte, fonds euros...
