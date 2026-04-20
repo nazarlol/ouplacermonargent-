@@ -19,7 +19,14 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 				max-width: 100%;
 				margin: 0;
 			}
-.prose {
+.hero-image { width: 100%; }
+			.hero-image img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+				box-shadow: var(--box-shadow);
+			}
+			.prose {
 				width: 720px;
 				max-width: calc(100% - 2em);
 				margin: auto;
@@ -49,7 +56,10 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 		<Header />
 		<main>
 			<article>
-<div class="prose">
+				<div class="hero-image">
+					<img width={1020} height={510} src="/blog-placeholder-1.jpg" alt="" />
+				</div>
+				<div class="prose">
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
