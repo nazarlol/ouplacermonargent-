@@ -1,11 +1,20 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 ---
 
-<Layout
-	title="À propos"
-	description="Qui sommes-nous ?"
-	pubDate={new Date('April 20 2026')}
->
-<p>Bienvenue sur OuPlacerMonArgent.fr — le site qui explique simplement comment faire travailler votre argent en France.</p>
-</Layout>
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title="À propos" description="Qui sommes-nous ?" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>À propos</h1>
+			<p>Bienvenue sur OuPlacerMonArgent.fr — le site qui explique simplement comment faire travailler votre argent en France.</p>
+		</main>
+		<Footer />
+	</body>
+</html>
