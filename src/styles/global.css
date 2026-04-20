@@ -19,6 +19,7 @@
 body {
 	font-family: var(--font-atkinson);
 	font-variant-numeric: normal;
+	font-feature-settings: "zero" 0;
 	margin: 0;
 	padding: 0;
 	text-align: left;
