@@ -2,6 +2,9 @@
 title: "Où placer son argent quand on débute ? Le guide complet 2026"
 description: "J'ai 39 ans et j'ai perdu 15 ans à ne rien faire avec mon argent. Voici ce que j'aurais voulu lire à 25 ans : Livret A, PEA, ETF, assurance vie — expliqués simplement, sans jargon."
 pubDate: 2026-04-20
+author: "Axel"
+tags: ["placement", "débutant", "ETF", "PEA", "livret-a"]
+slug: "ou-placer-son-argent-debutant"
 ---
 
 J'ai 39 ans. Ingénieur data. Et il y a 3 ans, j'ai fait un calcul qui m'a rendu malade.
