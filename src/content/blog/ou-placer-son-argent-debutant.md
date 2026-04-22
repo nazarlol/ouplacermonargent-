@@ -18,11 +18,11 @@ Ce site c'est ce que j'aurais voulu lire à 25 ans. Pas de jargon. Pas de consei
 
 ## Première chose à faire : arrêter de perdre de l'argent sans le savoir
 
-Votre compte courant ne rapporte rien. Zéro.
+Regarde le solde de ton compte courant ce soir. Maintenant demande-toi depuis combien de temps cet argent est là, à ne rien faire.
 
-Pendant ce temps, l'inflation tourne autour de 2-3% par an. Ça veut dire que 10 000€ qui dorment perdent 200-300€ de pouvoir d'achat chaque année. Silencieusement.
+L'inflation tourne autour de 2-3% par an. Ça veut dire que 10 000€ qui dorment perdent 200-300€ de pouvoir d'achat chaque année. Silencieusement. Sans que personne ne t'envoie une notification pour te le dire.
 
-Commencez par ça. Avant même de parler de bourse ou d'ETF.
+Commence par ça. Avant même de parler de bourse ou d'ETF.
 
 ---
 
@@ -70,7 +70,7 @@ Fonds euros (capital garanti) : **2,5-3,5%** selon les contrats. Linxea Spirit 2
 
 ## Les ETF : le secret que votre banquier ne vous dira jamais
 
-Votre banque vous propose des fonds "gérés activement" à 1,5-2% de frais annuels.
+Tu as probablement déjà un produit d'épargne proposé par ta banque — un fonds "géré activement" avec 1,5-2% de frais annuels. Tu l'as peut-être souscrit sans vraiment comprendre ce que tu payais.
 
 Un ETF fait la même chose — souvent mieux — pour 0,1-0,3% de frais.
 
