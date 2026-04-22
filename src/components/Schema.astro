@@ -1,0 +1,93 @@
+---
+interface Etape {
+  label: string;
+  description: string;
+  couleur?: string;
+}
+
+interface Props {
+  titre?: string;
+  etapes: Etape[];
+}
+
+const { titre, etapes } = Astro.props;
+
+const couleursDefaut = ['#16a34a', '#2563eb', '#9333ea', '#ea580c'];
+---
+
+<div class="schema">
+  {titre && <div class="schema-titre">{titre}</div>}
+  <div class="schema-etapes">
+    {etapes.map((etape, i) => (
+      <div class="schema-etape">
+        <div class="schema-point" style={`background:${etape.couleur ?? couleursDefaut[i % couleursDefaut.length]};`}>
+          {i + 1}
+        </div>
+        {i < etapes.length - 1 && <div class="schema-fleche">↓</div>}
+        <div class="schema-texte">
+          <div class="schema-label" style={`color:${etape.couleur ?? couleursDefaut[i % couleursDefaut.length]};`}>
+            {etape.label}
+          </div>
+          <div class="schema-description">{etape.description}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .schema {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .schema-titre {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #111827;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+  .schema-etapes {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .schema-etape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .schema-point {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  .schema-fleche {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    margin: 0.25rem 0;
+  }
+  .schema-texte {
+    margin-bottom: 0.75rem;
+  }
+  .schema-label {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .schema-description {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.15rem;
+  }
+</style>

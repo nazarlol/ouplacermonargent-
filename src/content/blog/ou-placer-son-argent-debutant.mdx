@@ -7,6 +7,10 @@ tags: ["placement", "débutant", "ETF", "PEA", "livret-a"]
 slug: "ou-placer-son-argent-debutant"
 ---
 
+import StatCard from '../../components/StatCard.astro';
+import Callout from '../../components/Callout.astro';
+import Schema from '../../components/Schema.astro';
+
 J'ai 39 ans. Ingénieur data. Et il y a 3 ans, j'ai fait un calcul qui m'a rendu malade.
 
 Si j'avais placé 200€ par mois depuis mes 25 ans dans un simple ETF Monde, j'aurais aujourd'hui **environ 89 000€**.
@@ -93,6 +97,15 @@ Mon choix : MSCI World. Maximum de diversification, minimum de réflexion.
 
 ## Par où commencer selon votre situation
 
+<Schema
+  titre="Par où commencer ?"
+  etapes={[
+    { label: "Livret A", description: "3 mois de dépenses — ton filet de sécurité" },
+    { label: "PEA + ETF", description: "Investir régulièrement sur le long terme" },
+    { label: "Assurance Vie", description: "Ouvrir tôt, même avec 500€" },
+  ]}
+/>
+
 **Vous n'avez pas 3 mois de dépenses de côté :**
 Priorité absolue au Livret A. Avant tout le reste.
 
@@ -121,6 +134,13 @@ Paniquer lors d'une baisse. En 2020 la bourse a chuté de 30% en un mois. Ceux q
 200€/mois sur un ETF MSCI World dans un PEA. Automatiquement, le 1er de chaque mois. Sans regarder les marchés.
 
 Résultat estimé à 39 ans : **environ 89 000€**.
+
+<StatCard
+  valeur="89 000€"
+  label="Ce que j'aurais aujourd'hui"
+  detail="200€/mois depuis 25 ans dans un ETF Monde à 8%/an"
+  couleur="vert"
+/>
 
 Ce n'est pas le chemin pour devenir millionnaire. Mais c'est de l'argent libre, sans effort, qui vous donne des options que vous n'auriez pas autrement — un apport pour un achat immobilier, une période sans travailler, un projet qui vous tient à cœur.
 

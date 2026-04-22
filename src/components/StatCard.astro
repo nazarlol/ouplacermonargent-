@@ -1,0 +1,48 @@
+---
+interface Props {
+  valeur: string;
+  label: string;
+  detail?: string;
+  couleur?: 'vert' | 'bleu' | 'orange';
+}
+
+const { valeur, label, detail, couleur = 'vert' } = Astro.props;
+
+const couleurs = {
+  vert:   { fond: '#f0fdf4', bordure: '#16a34a', texte: '#15803d' },
+  bleu:   { fond: '#eff6ff', bordure: '#2563eb', texte: '#1d4ed8' },
+  orange: { fond: '#fff7ed', bordure: '#ea580c', texte: '#c2410c' },
+};
+
+const c = couleurs[couleur];
+---
+
+<div class="stat-card" style={`background:${c.fond}; border-left: 4px solid ${c.bordure};`}>
+  <div class="stat-valeur" style={`color:${c.texte};`}>{valeur}</div>
+  <div class="stat-label">{label}</div>
+  {detail && <div class="stat-detail">{detail}</div>}
+</div>
+
+<style>
+  .stat-card {
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .stat-valeur {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+  .stat-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  .stat-detail {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+interface Props {
+  type?: 'info' | 'conseil' | 'attention';
+  titre?: string;
+}
+
+const { type = 'info', titre } = Astro.props;
+
+const styles = {
+  info:      { fond: '#eff6ff', bordure: '#2563eb', icone: 'ℹ️' },
+  conseil:   { fond: '#f0fdf4', bordure: '#16a34a', icone: '💡' },
+  attention: { fond: '#fff7ed', bordure: '#ea580c', icone: '⚠️' },
+};
+
+const s = styles[type];
+---
+
+<div class="callout" style={`background:${s.fond}; border-left: 4px solid ${s.bordure};`}>
+  {titre && (
+    <div class="callout-titre">
+      <span>{s.icone}</span> {titre}
+    </div>
+  )}
+  <div class="callout-corps">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .callout {
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+  }
+  .callout-titre {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+  .callout-corps {
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+  .callout-corps p {
+    margin: 0;
+  }
+</style>
