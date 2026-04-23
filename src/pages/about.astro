@@ -7,14 +7,70 @@ import Header from '../components/Header.astro';
 <!doctype html>
 <html lang="fr">
 	<head>
-		<BaseHead title="À propos" description="Qui sommes-nous ?" />
+		<BaseHead title="À propos — OuPlacerMonArgent.fr" description="Axel Lormeau, ingénieur data, 39 ans, Rodez. Le calcul qui m'a rendu malade — et pourquoi j'ai créé ce blog." />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1>À propos</h1>
-			<p>Bienvenue sur OuPlacerMonArgent.fr — le site qui explique simplement comment faire travailler votre argent en France.</p>
+
+			<p>Je m'appelle Axel. J'ai 39 ans, je suis ingénieur data, et je vis à Rodez.</p>
+
+			<p>Il y a trois ans, j'ai fait un calcul simple. Si j'avais investi 200€ par mois depuis mes 25 ans dans un ETF Monde, j'aurais aujourd'hui <strong>environ 89 000€</strong>. Sans compétences particulières. Sans y penser. Juste en automatisant un virement.</p>
+
+			<p>À la place, j'avais un Livret A à moitié vide et quinze ans d'épargne qui dormait sur un compte courant à 0%.</p>
+
+			<p>Ce n'est pas faute d'intelligence. C'est faute d'information. Personne ne m'avait expliqué comment ça fonctionnait — pas mes parents, pas mes profs, pas mon conseiller bancaire. Lui, il m'avait vendu un fonds maison à 1,8% de frais annuels.</p>
+
+			<hr />
+
+			<h2>Pourquoi ce blog</h2>
+
+			<p>Je ne suis pas conseiller financier. Je ne vais pas vous promettre de vous rendre riche.</p>
+
+			<p>Ce que je fais, c'est partager ce que j'aurais voulu lire à 25 ans. Des explications claires sur les outils qui existent en France — Livret A, PEA, ETF, assurance vie. Sans jargon. Sans produit à vendre.</p>
+
+			<p>J'écris pour les gens qui ont un salaire correct, qui ne sont pas dans le rouge, mais qui naviguent à vue depuis des années. Ceux qui savent qu'ils devraient "faire quelque chose" avec leur argent — mais qui ne savent pas par où commencer.</p>
+
+			<p>C'était moi. Pendant quinze ans.</p>
+
+			<hr />
+
+			<h2>Ce que vous trouverez ici</h2>
+
+			<p>Des guides pratiques sur les placements accessibles en France. Des calculs concrets. Des recommandations directes — avec les limites et les risques clairement énoncés.</p>
+
+			<p>Pas de contenu sponsorisé déguisé. Quand un lien est affilié, c'est indiqué.</p>
+
+			<p>Le meilleur point de départ : <a href="/blog/ou-placer-son-argent-debutant/">le guide complet pour débuter</a>.</p>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		max-width: 680px;
+		margin: auto;
+		padding: 3em 1em 5em;
+	}
+	h1 {
+		margin-bottom: 1.5rem;
+	}
+	h2 {
+		margin: 2rem 0 0.75rem;
+		font-size: 1.2rem;
+	}
+	p {
+		line-height: 1.7;
+		margin-bottom: 1rem;
+	}
+	hr {
+		border: none;
+		border-top: 1px solid rgb(var(--gray-light));
+		margin: 2.5rem 0;
+	}
+	a {
+		color: var(--accent);
+	}
+</style>

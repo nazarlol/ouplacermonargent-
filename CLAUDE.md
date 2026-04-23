@@ -211,8 +211,11 @@ Quand le sujet traite de situations universelles (revenus, dépenses, épargne, 
 - [ ] Intégrer les AffiliateCard une fois les liens validés
 
 ### Homepage
-- À faire en dernier, juste avant l'indexation Google complète
-- Doit raconter l'histoire d'Axel et mettre en avant les articles phares
+- ✅ Première version en place
+- La home ne doit pas être centrée sur l'histoire personnelle d'Axel — c'est le rôle de la page À propos
+- Message général et universel : épargner/investir se fait dans le temps, le plus tôt le mieux
+- Structure actuelle : accroche générale → derniers articles → lien vers tous les articles
+- Pas de section "par où commencer" avec ancres — les IDs générés par Astro sur les titres avec accents sont imprévisibles
 
 ---
 

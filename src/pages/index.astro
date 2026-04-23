@@ -1,8 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
 ---
 
 <!doctype html>
@@ -13,10 +19,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>Bienvenue sur OuPlacerMonArgent.fr</h1>
-			<p class="tagline">Apprenez à placer votre argent simplement</p>
-			<p>Des guides clairs et pratiques pour comprendre les placements en France : Livret A, PEA, assurance vie, ETF et bien plus.</p>
-			<a href="/blog" class="cta">Lire les articles →</a>
+
+			<!-- Hero -->
+			<section class="hero">
+				<p class="eyebrow">Finance personnelle pour débutants</p>
+				<h1>Épargner et investir, ça ne demande pas de compétences particulières. Juste de commencer.</h1>
+				<p class="hero-sub">
+					La plupart des gens savent qu'ils devraient "faire quelque chose" avec leur argent. Ils attendent le bon moment, la bonne somme, la bonne méthode. Pendant ce temps, l'inflation grignote leur épargne en silence.
+				</p>
+				<p class="hero-sub">
+					Devenir à l'aise financièrement ne se fait pas d'un coup. Ça se construit dans le temps, avec des gestes simples répétés. Et le seul vrai facteur, c'est de s'y mettre tôt.
+				</p>
+				<a href="/blog/" class="cta-primary">Lire les articles →</a>
+			</section>
+
+			<!-- Articles récents -->
+			<section class="articles">
+				<h2>Derniers articles</h2>
+				<ul>
+					{posts.map((post) => (
+						<li>
+							<a href={`/blog/${post.id}/`}>
+								<h3>{post.data.title}</h3>
+								<p class="date"><FormattedDate date={post.data.pubDate} /></p>
+								<p class="desc">{post.data.description}</p>
+							</a>
+						</li>
+					))}
+				</ul>
+				<a href="/blog/" class="see-all">Voir tous les articles →</a>
+			</section>
+
 		</main>
 		<Footer />
 	</body>
@@ -26,26 +59,123 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	main {
 		max-width: 720px;
 		margin: auto;
-		padding: 4em 1em;
-		text-align: center;
+		padding: 2em 1em 4em;
 	}
-	.tagline {
-		font-size: 1.4em;
+
+	/* Hero */
+	.hero {
+		padding: 3em 0 3.5em;
+		border-bottom: 1px solid rgb(var(--gray-light));
+	}
+	.eyebrow {
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--accent);
+		margin: 0 0 0.75em;
+		font-weight: 600;
+	}
+	.hero h1 {
+		font-size: clamp(1.8rem, 4vw, 2.4rem);
+		line-height: 1.15;
+		margin: 0 0 1rem;
+		color: rgb(var(--black));
+	}
+	.hero-sub {
+		font-size: 1.1rem;
 		color: rgb(var(--gray));
-		margin-bottom: 1.5em;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 0 2rem;
 	}
-	.cta {
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.cta-primary {
 		display: inline-block;
-		margin-top: 1.5em;
 		padding: 0.75em 1.5em;
 		background: var(--accent);
 		color: white;
 		border-radius: 6px;
 		text-decoration: none;
 		font-weight: 600;
+		transition: background 0.2s;
 	}
-	.cta:hover {
+	.cta-primary:hover {
 		background: var(--accent-dark);
 		color: white;
+	}
+	.cta-secondary {
+		color: rgb(var(--gray));
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+	.cta-secondary:hover {
+		color: var(--accent);
+	}
+
+	/* Articles */
+	.articles {
+		padding: 3em 0 0;
+	}
+	.articles h2 {
+		margin: 0 0 1.5em;
+		font-size: 1.3rem;
+	}
+	ul {
+		list-style: none;
+		margin: 0 0 1.5rem;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	ul li a {
+		display: block;
+		padding: 1.25rem;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		text-decoration: none;
+		transition: border-color 0.2s, box-shadow 0.2s;
+	}
+	ul li a:hover {
+		border-color: var(--accent);
+		box-shadow: var(--box-shadow);
+	}
+	ul li a h3 {
+		margin: 0 0 0.25rem;
+		font-size: 1.05rem;
+		color: rgb(var(--black));
+		line-height: 1.3;
+	}
+	ul li a:hover h3 {
+		color: var(--accent);
+	}
+	.date {
+		margin: 0 0 0.5rem;
+		font-size: 0.85rem;
+		color: rgb(var(--gray));
+	}
+	.desc {
+		margin: 0;
+		font-size: 0.9rem;
+		color: rgb(var(--gray));
+		line-height: 1.5;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	.see-all {
+		color: var(--accent);
+		text-decoration: none;
+		font-size: 0.95rem;
+		font-weight: 600;
+	}
+	.see-all:hover {
+		text-decoration: underline;
 	}
 </style>
