@@ -1,0 +1,141 @@
+---
+interface Props {
+  nom: string;
+  description: string;
+  avantages: string[];
+  lien: string;
+  labelLien?: string;
+  badge?: string;
+  couleur?: 'vert' | 'bleu' | 'orange';
+}
+
+const {
+  nom,
+  description,
+  avantages,
+  lien,
+  labelLien = "Découvrir l'offre",
+  badge,
+  couleur = 'vert',
+} = Astro.props;
+
+const couleurs = {
+  vert:   { bordure: '#16a34a', badge: '#16a34a', bouton: '#16a34a', boutonHover: '#15803d' },
+  bleu:   { bordure: '#2563eb', badge: '#2563eb', bouton: '#2563eb', boutonHover: '#1d4ed8' },
+  orange: { bordure: '#ea580c', badge: '#ea580c', bouton: '#ea580c', boutonHover: '#c2410c' },
+};
+
+const c = couleurs[couleur];
+---
+
+<div class="affiliate-card" style={`border-left: 4px solid ${c.bordure};`}>
+  <div class="affiliate-header">
+    <div class="affiliate-nom">{nom}</div>
+    {badge && (
+      <span class="affiliate-badge" style={`background:${c.badge};`}>{badge}</span>
+    )}
+  </div>
+
+  <p class="affiliate-description">{description}</p>
+
+  <ul class="affiliate-avantages">
+    {avantages.map((avantage) => (
+      <li>
+        <span class="affiliate-check" style={`color:${c.bordure};`}>✓</span>
+        {avantage}
+      </li>
+    ))}
+  </ul>
+
+  <div class="affiliate-footer">
+    <a
+      href={lien}
+      target="_blank"
+      rel="noopener noreferrer sponsored"
+      class="affiliate-bouton"
+      style={`background:${c.bouton};`}
+    >
+      {labelLien} →
+    </a>
+    <span class="affiliate-mention">Lien affilié — sans frais supplémentaires pour vous</span>
+  </div>
+</div>
+
+<style>
+  .affiliate-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  .affiliate-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .affiliate-nom {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+  }
+  .affiliate-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+  }
+  .affiliate-description {
+    font-size: 0.95rem;
+    color: #374151;
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+  }
+  .affiliate-avantages {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .affiliate-avantages li {
+    font-size: 0.9rem;
+    color: #374151;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .affiliate-check {
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .affiliate-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .affiliate-bouton {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    transition: opacity 0.15s ease;
+  }
+  .affiliate-bouton:hover {
+    opacity: 0.9;
+    color: white;
+  }
+  .affiliate-mention {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    font-style: italic;
+  }
+</style>
