@@ -47,7 +47,7 @@ Props : `valeur`, `label`, `detail?`, `couleur?` (vert | bleu | orange)
 Encadré texte mis en valeur.
 ```mdx
 <Callout type="conseil" titre="À retenir">
-  Votre contenu ici.
+  Ton contenu ici.
 </Callout>
 ```
 Props : `type?` (info | conseil | attention), `titre?`
@@ -58,7 +58,7 @@ Schéma de progression visuelle.
 <Schema
   titre="Par où commencer ?"
   etapes={[
-    { label: "Livret A", description: "3 mois de dépenses — votre filet de sécurité" },
+    { label: "Livret A", description: "3 mois de dépenses — ton filet de sécurité" },
     { label: "PEA + ETF", description: "Investir régulièrement sur le long terme" },
     { label: "Assurance Vie", description: "Ouvrir tôt, même avec 500€" },
   ]}
@@ -103,7 +103,7 @@ tags: ["tag1", "tag2"]
 
 Axel a 39 ans, ingénieur data, basé dans une petite bourgade du sud de la France.
 Il n'est pas conseiller financier et ne prétend pas l'être.
-Son angle : "je pars de zéro avec vous".
+Son angle : "je pars de zéro avec toi".
 
 Ce qui le rend crédible : il a calculé ce qu'il aurait eu s'il avait investi 200€/mois depuis ses 25 ans. Le résultat l'a rendu malade. Ce blog c'est sa façon de ne pas répéter cette erreur — et d'aider ceux dans la même situation.
 
@@ -111,7 +111,7 @@ Ce qui le rend crédible : il a calculé ce qu'il aurait eu s'il avait investi 2
 - 200€/mois depuis 25 ans dans un ETF Monde à 8%/an = environ 89 000€ à 39 ans
 - 100€/mois depuis 25 ans à 7%/an = environ 30 000€ à 39 ans
 
-Axel parle à la première personne "je" pour ses anecdotes. Il vouvoie toujours le lecteur.
+Axel parle à la première personne "je" pour ses anecdotes. Il tutoie le lecteur, sans jamais tomber dans le familier.
 
 ---
 
@@ -124,9 +124,12 @@ Axel parle à la première personne "je" pour ses anecdotes. Il vouvoie toujours
 - Contexte France entière — jamais centré sur Paris
 
 ### Voix et adresse au lecteur
-- Toujours vouvoyer le lecteur — "vous", "votre", "vos"
+- Toujours tutoyer le lecteur — "tu", "ton", "tes", "toi"
 - Axel parle à la première personne "je" pour ses anecdotes personnelles
 - Ne jamais mélanger "tu" et "vous" dans le même article
+- Le tutoiement reste sérieux et précis — jamais familier, jamais racoleur. "Tu as probablement déjà..." oui. "Ouais mec laisse tomber..." non.
+- Pas d'argot, pas d'expressions très orales ("genre", "du coup", "en mode"), pas d'interpellations agressives
+- Le tutoiement crée la proximité, le contenu apporte le sérieux
 
 ### Style
 - Phrases courtes. Maximum 2 lignes.
@@ -171,15 +174,15 @@ Chaque article doit pointer vers d'autres articles du blog. C'est un des leviers
 ### Ancrage dans le vécu
 Quand le sujet traite de situations universelles (revenus, dépenses, épargne, retraite, banque, abonnements...), formuler l'information de manière à ce que le lecteur fasse lui-même le lien avec sa situation.
 - Pas une technique à placer à un endroit précis — une façon naturelle d'écrire
-- Préférer "posez la question autour de vous" à "beaucoup de gens"
-- Préférer "vous avez probablement déjà..." à "les Français ont tendance à..."
+- Préférer "pose la question autour de toi" à "beaucoup de gens"
+- Préférer "tu as probablement déjà..." à "les Français ont tendance à..."
 - L'information doit renvoyer le lecteur à sa propre réalité sans lui demander explicitement de le faire
 - Si le sujet ne s'y prête pas naturellement, on ne force pas
 
 ### Disclaimer standard
 À placer en italique à la fin de chaque article :
 
-*Cet article est rédigé à titre informatif et pédagogique. Je ne suis pas conseiller financier. Les chiffres et exemples présentés sont des illustrations générales. Avant toute décision, prenez le temps d'analyser votre situation afin de ne pas compromettre votre situation financière.*
+*Cet article est rédigé à titre informatif et pédagogique. Je ne suis pas conseiller financier. Les chiffres et exemples présentés sont des illustrations générales. Avant toute décision, prends le temps d'analyser ta situation afin de ne pas compromettre ta situation financière.*
 
 ---
 
