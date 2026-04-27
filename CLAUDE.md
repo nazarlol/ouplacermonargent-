@@ -229,7 +229,7 @@ Quand le sujet traite de situations universelles (revenus, dépenses, épargne, 
 
 ### Technique
 - [ ] Composant `<Checklist>` avec localStorage — actions à cocher dans chaque article
-- [ ] Redirect www en cours d'initialisation sur Cloudflare Pages
+- [x] Redirect www configuré sur Cloudflare Pages
 - [ ] Intégrer le logo OPMA sur le site
 
 ### Contenu
