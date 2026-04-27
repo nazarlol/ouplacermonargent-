@@ -4,7 +4,7 @@
 
 Blog de finance personnelle française pour débutants.
 Objectif : générer 500-1000€/mois de revenus passifs via des liens d'affiliation.
-Auteur : Axel Lormeau, ingénieur data, 39 ans, basé à Rodez (France).
+Auteur : Axel Lormeau, ingénieur data, 39 ans, basé dans une petite bourgade du sud de la France.
 
 ---
 
@@ -85,7 +85,7 @@ Carte d'affiliation — à utiliser uniquement quand le lien affilié est dispon
 
 ## Frontmatter standard
 
-Chaque article doit avoir ce frontmatter :
+Chaque article doit avoir ce frontmatter. Le slug est dérivé automatiquement du nom de fichier par Astro — ne pas le dupliquer ici.
 
 ```yaml
 ---
@@ -94,7 +94,6 @@ description: "Description SEO — 150-160 caractères"
 pubDate: YYYY-MM-DD
 author: "Axel"
 tags: ["tag1", "tag2"]
-slug: "slug-de-l-article"
 ---
 ```
 
@@ -102,7 +101,7 @@ slug: "slug-de-l-article"
 
 ## Persona — Axel, auteur du blog
 
-Axel a 39 ans, ingénieur data, basé en France (pas à Paris).
+Axel a 39 ans, ingénieur data, basé dans une petite bourgade du sud de la France.
 Il n'est pas conseiller financier et ne prétend pas l'être.
 Son angle : "je pars de zéro avec vous".
 
@@ -144,6 +143,30 @@ optimal, crucial, essentiel, incontournable, néanmoins, toutefois, il convient 
 - Jamais commencer par une définition générique
 - Terminer par une recommandation claire et directe
 - Disclaimer légal en italique à la fin
+
+### Calibrage longueur (SEO)
+
+La longueur cible dépend du type d'article. Ne pas remplir avec du vide pour atteindre la fourchette — mais ne pas finir nettement en-dessous non plus, Google récompense la profondeur sur les requêtes commerciales.
+
+- **Articles transactionnels** (avis produit, comparatifs "meilleur X", "X vs Y") : **2 500 à 3 500 mots**
+  Exemples : "Trade Republic avis 2026", "Meilleur courtier bourse débutant France 2026"
+- **Articles informationnels approfondis** (guides complets, comparaisons de dispositifs) : **2 000 à 2 800 mots**
+  Exemples : "PEA ou Assurance Vie", "Où placer son argent quand on débute"
+- **Articles informationnels pratiques** (tutoriels, méthodes, calculs) : **1 500 à 2 200 mots**
+  Exemples : "Comment investir 100€ par mois", "Comment gérer son budget"
+
+Au-delà de 3 500 mots, mieux vaut découper en deux articles et les lier entre eux.
+
+### Maillage interne
+
+Chaque article doit pointer vers d'autres articles du blog. C'est un des leviers SEO les plus rentables — Google s'en sert pour comprendre la structure du site, et ça fait circuler le lecteur sur les pages qui convertissent.
+
+- **Minimum 3 liens internes** vers d'autres articles, intégrés dans le corps du texte (pas en bloc à la fin)
+- Les articles informationnels doivent toujours lier vers les articles transactionnels quand le sujet s'y prête (pousser le trafic vers ce qui rapporte)
+- Format : `[texte d'ancrage descriptif](/blog/slug-article/)` — l'ancre doit décrire le contenu cible, jamais "cliquez ici" ou "voir cet article"
+- Lier dès qu'un sujet d'article existant est mentionné naturellement dans le texte
+- Si un lien serait pertinent mais que l'article cible n'existe pas encore, noter dans un commentaire MDX `{/* TODO: lier vers article-X quand publié */}`
+- Ne jamais forcer un lien artificiellement — si le contexte ne s'y prête pas, on s'abstient
 
 ### Ancrage dans le vécu
 Quand le sujet traite de situations universelles (revenus, dépenses, épargne, retraite, banque, abonnements...), formuler l'information de manière à ce que le lecteur fasse lui-même le lien avec sa situation.
