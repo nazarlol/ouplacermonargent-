@@ -190,15 +190,17 @@ Quand le sujet traite de situations universelles (revenus, dépenses, épargne, 
 
 1. `ou-placer-son-argent-debutant.mdx` — Où placer son argent quand on débute ? Le guide complet 2026
 2. `comment-gerer-son-budget.mdx` — Comment gérer son budget : l'audit que personne ne veut faire
+3. `pea-debutant-guide-complet.mdx` — PEA pour débutants : le guide complet pour 2026
+4. `assurance-vie-debutant-guide-complet.mdx` — Assurance vie pour débutants : le guide complet pour 2026
+5. `pea-ou-assurance-vie.mdx` — PEA ou Assurance Vie — lequel choisir en 2026 ?
 
 ---
 
 ## Articles à écrire
 
 1. Meilleur courtier bourse débutant France 2026
-2. PEA ou Assurance Vie — lequel choisir ?
-3. Trade Republic avis 2026
-4. Comment investir 100€ par mois en bourse
+2. Trade Republic avis 2026
+3. Comment investir 100€ par mois en bourse
 
 ---
 
