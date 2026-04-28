@@ -193,14 +193,14 @@ Quand le sujet traite de situations universelles (revenus, dépenses, épargne, 
 3. `pea-debutant-guide-complet.mdx` — PEA pour débutants : le guide complet pour 2026
 4. `assurance-vie-debutant-guide-complet.mdx` — Assurance vie pour débutants : le guide complet pour 2026
 5. `pea-ou-assurance-vie.mdx` — PEA ou Assurance Vie — lequel choisir en 2026 ?
+6. `meilleur-courtier-bourse-debutant-france-2026.mdx` — Meilleur courtier bourse débutant France 2026 : le comparatif honnête
+7. `trade-republic-avis-2026.mdx` — Trade Republic avis 2026 : ce que tu dois savoir avant d'ouvrir un PEA
 
 ---
 
 ## Articles à écrire
 
-1. Meilleur courtier bourse débutant France 2026
-2. Trade Republic avis 2026
-3. Comment investir 100€ par mois en bourse
+1. Comment investir 100€ par mois en bourse
 
 ---
 
@@ -210,6 +210,9 @@ Quand le sujet traite de situations universelles (revenus, dépenses, épargne, 
 - **Linxea** (Awin) — en attente de validation
 - **BoursoBank** (Awin) — en attente de validation
 - **Trade Republic** (Impact.com) — en attente de validation
+- **XTB** (direct via xtb.com/fr) — candidaté le 27/04/2026
+- **eToro** (etoropartners.com) — candidaté le 27/04/2026
+- **DEGIRO** (Daisycon) — candidaté le 27/04/2026
 
 ### Règle d'intégration
 - Ne pas intégrer de lien affilié sans avoir le lien trackable réel
@@ -224,6 +227,7 @@ Quand le sujet traite de situations universelles (revenus, dépenses, épargne, 
 - Sitemap soumis : `https://ouplacermonargent.fr/sitemap-index.xml`
 - Balise `site` dans `astro.config.mjs` : `https://ouplacermonargent.fr`
 - Robots.txt géré par Cloudflare — bots IA bloqués, Googlebot autorisé
+- Email pro configuré : `axel@ouplacermonargent.fr` (via Cloudflare Email Routing)
 
 ---
 
@@ -235,8 +239,13 @@ Quand le sujet traite de situations universelles (revenus, dépenses, épargne, 
 - [ ] Intégrer le logo OPMA sur le site
 
 ### Contenu
-- [ ] Écrire les 4 prochains articles
+- [ ] Écrire l'article "Comment investir 100€ par mois en bourse"
 - [ ] Intégrer les AffiliateCard une fois les liens validés
+
+### Crédibilité & conformité
+- [ ] Auditer et étoffer la page "À propos" (identité Axel, métier, aveu non-conseiller financier, déclencheur du blog avec le calcul des 89 000€, motivation)
+- [ ] Vérifier les mentions légales (nom éditeur, adresse, email contact, hébergeur Cloudflare, directeur de publication)
+- [ ] Préparer une bannière ou page "Transparence affiliation" pour quand les liens seront actifs (à activer dès le premier programme validé)
 
 ### Homepage
 - ✅ Première version en place
