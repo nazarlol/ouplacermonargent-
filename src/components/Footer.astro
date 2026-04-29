@@ -1,11 +1,18 @@
 ---
 const today = new Date();
 ---
-
 <footer>
-	&copy; {today.getFullYear()} OuPlacerMonArgent.fr —
-	<a href="/mentions-legales">Mentions légales</a>
+	<nav class="footer-nav">
+		<a href="/">Accueil</a>
+		<a href="/blog">Blog</a>
+		<a href="/about">À propos</a>
+		<a href="/mentions-legales">Mentions légales</a>
+	</nav>
+	<p class="footer-copy">
+		&copy; {today.getFullYear()} OuPlacerMonArgent.fr
+	</p>
 </footer>
+
 <style>
 	footer {
 		padding: 2em 1em 6em 1em;
@@ -13,10 +20,24 @@ const today = new Date();
 		color: rgb(var(--gray));
 		text-align: center;
 	}
+	.footer-nav {
+		display: flex;
+		justify-content: center;
+		gap: 1.5em;
+		flex-wrap: wrap;
+		margin-bottom: 1em;
+		font-size: 0.95rem;
+	}
+	.footer-copy {
+		font-size: 0.9rem;
+		margin: 0;
+	}
 	footer a {
 		color: rgb(var(--gray));
+		text-decoration: none;
 	}
 	footer a:hover {
 		color: rgb(var(--gray-dark));
+		text-decoration: underline;
 	}
 </style>
